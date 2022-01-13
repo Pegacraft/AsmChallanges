@@ -1,43 +1,10 @@
-# Block when operating
-A = 0x7FFF
-D = *A
-# Check for 9th & 10th bit
-A = 0b110_0000_0000
-D = D & A
-A = 0
-D; JGT
-
-# Check if wall is in front
-A = 0x10
-D = *A
-# Check for 8th bit
-A = 0b100
-D = D & A
-
-# Save value to ram
+# test
+A = 10
+D = A
 A = 1
 *A = D
 
-# If *A < 0 jmp to A
+D = *A & D
+# Test
 A = 1
-D = *A
-A = 22
-D; JLE
-
-#Rotate left
-A = 0b0000_1000
-D = A
-A = 0x7FFF
-*A = D
-
-A = 0
-JMP
-
-# Move forward
-A = 0b0000_0100
-D = A
-A = 0x7FFF
-*A = D
-
-A = 0
-JMP
+A = 2
